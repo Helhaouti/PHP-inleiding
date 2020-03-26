@@ -50,6 +50,8 @@ if ($input == "Bomen") {
     $sellected = "forLoop";     
     } elseif ($input == "controlestructurEnLoops") {
         $sellected = "controlestructurEnLoops";     
+    } elseif ($input == "busreis") {
+        $sellected = "busreis";     
 }
 
 
@@ -103,5 +105,8 @@ if ($sellected == "controlestructurEnLoops") {
     }
 }
 
+if ($sellected == "busreis") {
+    echo "works";
+}
 
 ?>
