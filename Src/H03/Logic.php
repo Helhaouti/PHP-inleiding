@@ -39,7 +39,6 @@ function test_input($data) {
     return $data;
 }
 
-
 if ($input == "Bomen") {
     $sellected = $Bomen;
     } elseif ($input == "Apen") {
@@ -52,8 +51,11 @@ if ($input == "Bomen") {
         $sellected = "controlestructurEnLoops";     
     } elseif ($input == "busreis") {
         $sellected = "busreis";     
-}
-
+    } elseif ($input == "zwemclubs") {
+        $sellected = "zwemclubs";     
+    } elseif ($input == "kapperszaak") {
+        $sellected = "kapperszaak";     
+    }
 
 foreach ($sellected as $value) {
     if ($sellected == $Bomen) {
@@ -66,8 +68,8 @@ foreach ($sellected as $value) {
 if ($sellected == "Kerstboom") {
     $asteriskPerLine = 1;
     $spacesPerLine = 9;
-    for($line = 0; $line < 9; $line++) {
 
+    for($line = 0; $line < 9; $line++) {
         for($spaces = 0; $spaces < $spacesPerLine; $spaces++){
             echo "&nbsp;";
         }
@@ -106,7 +108,36 @@ if ($sellected == "controlestructurEnLoops") {
 }
 
 if ($sellected == "busreis") {
-    echo "works";
+    $leeftijd = 12;
+    $prijs = 10.00;
+
+    if ($leeftijd <= 3) {
+       echo $leeftijd . " = €" . $prijs * 0;
+    } elseif ($leeftijd > 65 or $leeftijd <= 12) {
+        echo $leeftijd . " = €" . $prijs * 0.5;
+    } else {
+        echo $leeftijd . " = €" . $prijs;
+    }
 }
+
+if ($sellected == "zwemclubs") {
+    $zwemclubsData = array("De spartelkuikens"=>25 , "De waterbuffels"=>32, "Plonsmderin"=>11, "Bommetje"=>23);
+
+    foreach ($zwemclubsData as $x => $x_value) {
+        echo $x . " = " . $x_value;
+
+        for ($y = 0; $y < floor($x_value / 5); $y++) {
+            echo "<img style='width: 30px;' src='Resources/swimIcon.png'>";
+        }
+        echo "<br>";
+    }
+}
+
+// Laatste opdracht 
+//
+// Welke php-code moet ingevuld worden op de plek van ..... => ..... ?
+// 
+// plek1 is $tijd % plek2 is $afspraak
+//
 
 ?>
