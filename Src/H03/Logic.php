@@ -55,7 +55,7 @@ if ($input == "Bomen") {
         $sellected = "zwemclubs";     
     } elseif ($input == "kapperszaak") {
         $sellected = "kapperszaak";     
-    }
+}
 
 foreach ($sellected as $value) {
     if ($sellected == $Bomen) {
